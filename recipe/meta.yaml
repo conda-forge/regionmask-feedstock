@@ -1,6 +1,6 @@
 {% set name = "regionmask" %}
-{% set version = "0.4.0" %}
-{% set sha256 = "a12476a39020df33359bb4a4824f5da8d7a033fb319c84ed93df3cd205fb19f6" %}
+{% set version = "0.5.0" %}
+{% set sha256 = "30de02890433500eee48a5ff9666b131ac0c00516ac7de8ec4880792995bded5" %}
 
 package:
   name: {{ name|lower }}
@@ -27,13 +27,18 @@ requirements:
     - shapely
     - six
     - cartopy
+    - rasterio
     - geopandas
+    - xarray
+    - affine
 
 test:
   imports:
     - regionmask
     - regionmask.core
     - regionmask.defined_regions
+  requires:
+    - pytest
 
 about:
   home: https://github.com/mathause/regionmask
