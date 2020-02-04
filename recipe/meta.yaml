@@ -1,20 +1,17 @@
-{% set name = "regionmask" %}
 {% set version = "0.5.0" %}
-{% set sha256 = "30de02890433500eee48a5ff9666b131ac0c00516ac7de8ec4880792995bded5" %}
 
 package:
-  name: {{ name|lower }}
+  name: regionmask
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/r/regionmask/regionmask-{{ version }}.tar.gz
+  sha256: 30de02890433500eee48a5ff9666b131ac0c00516ac7de8ec4880792995bded5
 
 build:
+  number: 1
   noarch: python
-  number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
@@ -23,7 +20,7 @@ requirements:
   run:
     - python
     - numpy
-    - matplotlib
+    - matplotlib-base
     - shapely
     - six
     - cartopy
