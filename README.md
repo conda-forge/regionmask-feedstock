@@ -5,7 +5,7 @@ Home: https://github.com/mathause/regionmask
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: plotting and creation of masks of spatial regions
 
