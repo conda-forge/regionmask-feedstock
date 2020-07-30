@@ -1,4 +1,4 @@
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 
 package:
   name: regionmask
@@ -6,19 +6,19 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/regionmask/regionmask-{{ version }}.tar.gz
-  sha256: 30de02890433500eee48a5ff9666b131ac0c00516ac7de8ec4880792995bded5
+  sha256: 9666ddaeae0e414900de076a65da0ac2854b0db64d51351fcadea991240fba7e
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
-    - python
+    - python >=2.7
     - pip
   run:
-    - python
+    - python >=2.7
     - numpy
     - matplotlib-base
     - shapely
@@ -28,6 +28,7 @@ requirements:
     - geopandas
     - xarray
     - affine
+    - pooch
 
 test:
   imports:
