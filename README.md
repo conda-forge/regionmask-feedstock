@@ -5,11 +5,13 @@ Home: https://github.com/mathause/regionmask
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/regionmask-feedstock/blob/master/LICENSE.txt)
 
 Summary: plotting and creation of masks of spatial regions
 
+Development: https://github.com/mathause/regionmask
 
+Documentation: http://regionmask.readthedocs.io/
 
 Current build status
 ====================

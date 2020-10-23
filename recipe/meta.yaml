@@ -9,7 +9,7 @@ source:
   sha256: 044d3a62132961b17d4b0c3633294f943329114a3391b113e9a05014c196b4a3
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
@@ -24,6 +24,7 @@ requirements:
     - shapely
     - six
     - cartopy
+    - scipy
     - rasterio
     - geopandas
     - xarray
