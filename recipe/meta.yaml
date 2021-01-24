@@ -1,4 +1,4 @@
-{% set version = "0.6.1" %}
+{% set version = "0.6.2" %}
 
 package:
   name: regionmask
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/regionmask/regionmask-{{ version }}.tar.gz
-  sha256: 044d3a62132961b17d4b0c3633294f943329114a3391b113e9a05014c196b4a3
+  sha256: 360d3628a16a50a2f5ce7873160d87775c33c6a9bc80f90c354aef2c52b9566e
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
@@ -24,7 +24,6 @@ requirements:
     - shapely
     - six
     - cartopy
-    - scipy
     - rasterio
     - geopandas
     - xarray
