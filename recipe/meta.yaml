@@ -1,4 +1,4 @@
-{% set version = "0.6.2" %}
+{% set version = "0.7.0" %}
 
 package:
   name: regionmask
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/regionmask/regionmask-{{ version }}.tar.gz
-  sha256: 360d3628a16a50a2f5ce7873160d87775c33c6a9bc80f90c354aef2c52b9566e
+  sha256: 9b6e65e3daa202f1f3d58c98f2d035c6d4ee969f468423b96f81099922b332cd
 
 build:
   number: 0
@@ -15,20 +15,16 @@ build:
 
 requirements:
   build:
-    - python >=2.7
+    - python >=3.6
     - pip
   run:
-    - python >=2.7
-    - numpy
-    - matplotlib-base
-    - shapely
-    - six
-    - cartopy
-    - rasterio
-    - geopandas
-    - xarray
-    - affine
-    - pooch
+    - python >=3.6
+    - geopandas >=0.6
+    - numpy >=1.17
+    - pooch >=1.0
+    - rasterio >=1.0
+    - shapely >=1.6
+    - xarray >=0.15
 
 test:
   imports:
@@ -39,13 +35,13 @@ test:
     - pytest
 
 about:
-  home: https://github.com/mathause/regionmask
+  home: https://github.com/regionmask/regionmask
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: 'plotting and creation of masks of spatial regions'
   doc_url: http://regionmask.readthedocs.io/
-  dev_url: https://github.com/mathause/regionmask
+  dev_url: https://github.com/regionmask/regionmask
 
 extra:
   recipe-maintainers:
