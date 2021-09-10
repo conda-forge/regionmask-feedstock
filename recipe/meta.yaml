@@ -9,20 +9,23 @@ source:
   sha256: b37d9960c94178e88f47a1ac486c705bd9e2c96971739c1234312bff33f7ba48
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
-  build:
+  host:
     - python >=3.6
     - pip
+    - setuptools_scm
+
   run:
     - python >=3.6
     - geopandas >=0.6
     - numpy >=1.17
     - pooch >=1.0
     - rasterio >=1.0
+    - setuptools >=40.4
     - shapely >=1.6
     - xarray >=0.15
 
