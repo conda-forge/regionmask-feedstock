@@ -1,4 +1,4 @@
-{% set version = "0.9.0" %}
+{% set version = "0.10.0" %}
 
 package:
   name: regionmask
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/regionmask/regionmask-{{ version }}.tar.gz
-  sha256: 8da1b6359756241867c4e967097810ef86b9dff4e06d11ca648fe1d607e9cf14
+  sha256: 6e951ad3513234d1fbd9ed2bfe71b4fd8b088d3fd270606251692854976a3a6b
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -43,7 +43,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'plotting and creation of masks of spatial regions'
+  summary: plotting and creation of masks of spatial regions
   doc_url: http://regionmask.readthedocs.io/
   dev_url: https://github.com/regionmask/regionmask
 
