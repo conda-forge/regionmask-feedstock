@@ -1,4 +1,4 @@
-{% set version = "0.9.0" %}
+{% set version = "0.10.0" %}
 
 package:
   name: regionmask
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/regionmask/regionmask-{{ version }}.tar.gz
-  sha256: 8da1b6359756241867c4e967097810ef86b9dff4e06d11ca648fe1d607e9cf14
+  sha256: 6e951ad3513234d1fbd9ed2bfe71b4fd8b088d3fd270606251692854976a3a6b
 
 build:
   number: 0
@@ -15,20 +15,24 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools_scm
 
   run:
-    - python >=3.6
-    - geopandas >=0.6
+    - python >=3.7
+    - geopandas >=0.7
     - numpy >=1.17
-    - packaging >=20.0
-    - pooch >=1.0
-    - rasterio >=1.0
+    - packaging >=21.3
+    - pooch >=1.2
+    - rasterio >=1.1
     - setuptools >=40.4
-    - shapely >=1.6
+    - shapely >=1.7
     - xarray >=0.15
+
+  run_constrained:
+    - cartopy >=0.17
+    - matplotlib >=3.2
 
 test:
   imports:
@@ -36,7 +40,9 @@ test:
     - regionmask.core
     - regionmask.defined_regions
   requires:
-    - pytest
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/regionmask/regionmask
