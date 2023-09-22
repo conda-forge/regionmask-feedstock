@@ -15,24 +15,25 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
-    - setuptools_scm
+    - setuptools >=42
+    - setuptools-scm >=7
 
   run:
-    - python >=3.7
-    - geopandas >=0.7
-    - numpy >=1.17
+    - python >=3.8
+    - geopandas >=0.10
+    - numpy >=1.21
     - packaging >=21.3
-    - pooch >=1.2
-    - rasterio >=1.1
-    - setuptools >=40.4
-    - shapely >=1.7
-    - xarray >=0.15
+    - pooch >=1.4
+    - rasterio >=1.2
+    - shapely >=1.8
+    - xarray >=0.20
 
   run_constrained:
-    - cartopy >=0.17
-    - matplotlib >=3.2
+    - cartopy >=0.20
+    - cf_xarray >=0.7
+    - matplotlib >=3.5
 
 test:
   imports:
