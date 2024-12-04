@@ -1,12 +1,12 @@
-{% set version = "0.12.1" %}
+{% set version = "0.13.0" %}
 
 package:
   name: regionmask
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/r/regionmask/regionmask-{{ version }}.tar.gz
-  sha256: 7ef1e70c6ebab7bfc6a80e13f6fe771945b8b6a31b7f8980fc88c8b8505bb854
+  url: https://pypi.org/packages/source/r/regionmask/regionmask-{{ version }}.tar.gz
+  sha256: 56fd11986cd2f03bd3ac3ecb19399bff3e8cb79e151f7e33e18121735123abdf
 
 build:
   number: 0
